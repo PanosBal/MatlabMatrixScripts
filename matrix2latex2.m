@@ -1,12 +1,11 @@
 function matrix2latex2(matrix, filename, varargin)
-%Author: Παναγιώτης Μπαλταγιάννης, ΑΜ:5591, Date:30/12/2019
 % Example input:
 %   matrix = [1.5 1.764; 3.523 0.2];
 %   rowLabels = {'row 1', 'row 2'};
 %   columnLabels = {'col 1', 'col 2'};
 %   matrix2latex(matrix, 'out.tex', 'rowLabels', rowLabels, 'columnLabels', columnLabels, 'alignment', 'c', 'format', '%-6.2f', 'size', 'tiny');
 
-    Mstyle=[];%prostheto to Mstyle
+    Mstyle=[];
     rowLabels = [];
     colLabels = [];
     alignment = 'l';
