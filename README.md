@@ -1,8 +1,8 @@
 # MatlabMatrixScripts
 Matlab scripts which can make your life easier when work with matrices.
 
-# mask_band(Create Band or Block Tridiagonal Matrix)
-You can calling this function as mask_band(n,type,p,q).
+# mask_band
+With this script you can create band or block tridiagonal matrices. You can call it as mask_band(n,type,p,q).
                                            - n: size of the matrix
                                            - p: upper bandwidth
                                            - q: lower bandwidth
@@ -17,3 +17,9 @@ You can calling this function as mask_band(n,type,p,q).
 <p align="center">
   <img src="https://user-images.githubusercontent.com/46083188/89534928-5d960800-d7fe-11ea-8a62-dffdd23db0e4.png">
 </p>
+
+# dd_check(Check if a matrix is diagonally dominant and find the grade of the dominant)
+You can calling this function as dd_check(A), which A is the name of the matrix that you want to check.
+- dflag=1 if the matrix is stricly diagonally dominant and 0 if not.
+- discrC: Return the grade of the diagonally dominance by collumns.
+- discrR: Return the grade of the diagonally dominance by rows.
