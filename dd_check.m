@@ -1,22 +1,19 @@
 function [dflag,discrC,discrR] = dd_check(A)
-%Author: Παναγιώτης Μπαλταγιάννης, ΑΜ:5591, Date:23/12/2019
 
 flagStrictRow=0;
 flagStrictColumn=0;
 
-% apoluti timi diagoniou
+% absolute value of the diagonial
 absDiag  = abs(diag(A));
-%apoluti timi athroismatos kathe grammis ektos apo ti diagonio
 absRow = sum(abs(A), 2) - absDiag; 
-%apoluti timi athroismatos kathe stilis ektos apo ti diagonio
 absColumn= transpose(sum(abs(A),1))- absDiag;
 
-%elegxos giagonias kuriarxias
+%diagonally dominant check
 flagRow = all(absRow <= absDiag);%all:Determine if all array elements are nonzero or true
 flagColumn = all(absColumn <= absDiag);
 dflag=flagRow&flagColumn;
 
-%elegxos afstiris diagonias kuriarxias
+%stricly diagonally dominant check
 if flagRow==1
     flagStrictRow = any(absRow  >= absDiag);
 end
@@ -25,12 +22,12 @@ if flagColumn==1
 end
 flagStrict= flagStrictRow & flagStrictColumn;
 
-%elegxos afstiris diagonias kuriarxias stilis
+%stricly diagonally dominant check columns
 tempDiscrC=absDiag-absColumn;
 indicesC = find(tempDiscrC>0);
 discrC=length(indicesC);
 
-%elegxos afstiris diagonias kuriarxias grammon
+%stricly diagonally dominant check rows
 tempDiscrR=absDiag-absRow;
 indicesR = find(tempDiscrR>0);
 discrR=length(indicesR);
