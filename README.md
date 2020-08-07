@@ -20,7 +20,7 @@ With this script you can create band or block tridiagonal matrices. You can call
 
 # dd_check
 Check if a matrix is diagonally dominant and find the grade of the dominant. You call this function as dd_check(A), which A is the name of the matrix that you want to check.
-- dflag=1 if the matrix is stricly diagonally dominant and 0 if not.
+- dflag returns 1 if the matrix is stricly diagonally dominant and 0 if not.
 - discrC: Return the grade of the diagonally dominance by collumns.
 - discrR: Return the grade of the diagonally dominance by rows.
 
